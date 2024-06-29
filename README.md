@@ -2,69 +2,93 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Restaurant Management System
+A full-stack application for managing orders, products, and users in a restaurant setting. Customers can place orders, view order history, and track order statuses. Admins have access to manage users, products, and orders.
 
-In the project directory, you can run:
+Features
+For Customers:
+Authentication:
 
-### `npm start`
+Customers can sign up and log in securely.
+Session management for authenticated users.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Order Management:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Customers can browse products and add items to their cart.
+Place orders with details like delivery address and payment information.
+View past orders and check their status (pending, dispatched, delivered).
 
-### `npm test`
+For Admins:
+User Management:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Admins have access to manage user accounts.
+Create, update, and delete user accounts as necessary.
 
-### `npm run build`
+Product Management:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Admins can add new products, update existing ones, and delete products.
+Manage product categories and descriptions.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Order Management:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+View all orders placed by customers.
+Update order statuses (pending, dispatched, delivered).
+View order details including customer information and products ordered.
 
-### `npm run eject`
+Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Frontend:
+React.js for building the user interface.
+Redux for state management.
+Tailwind CSS for styling components.
+Axios for handling asynchronous HTTP requests.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Backend:
+Node.js and Express.js for building RESTful APIs.
+MongoDB as the database using Mongoose for object modeling.
+JWT (JSON Web Tokens) for secure authentication and authorization.
+Firebase Cloud Messaging (FCM) for push notifications.
+Setup Instructions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Clone the repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+git clone https://github.com/bajpaisushil/Restaurant_FullStack-Client.git
 
-## Learn More
+cd repository
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Install dependencies:
+cd frontend
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+cd ../backend
 
-### Code Splitting
+npm install
+Set up environment variables:
+Create a .env file in the backend directory and configure environment variables like MongoDB connection URI, JWT secret, etc.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Run the application:
+Start the backend server:
 
-### Analyzing the Bundle Size
+cd backend
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Start the frontend development server:
 
-### Making a Progressive Web App
+cd frontend
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Access the application:
+Open your browser and navigate to http://localhost:3000 to view the application.
 
-### Advanced Configuration
+# Previews
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![Screenshot 2024-06-29 171913](https://github.com/bajpaisushil/Restaurant_FullStack-Client/assets/111970311/36bea05f-7802-4835-b834-8fb117cb068f)
+![Screenshot 2024-06-29 172138](https://github.com/bajpaisushil/Restaurant_FullStack-Client/assets/111970311/bb47c03b-3ddc-4d07-aefb-8935bb4598b6)
+![Screenshot 2024-06-29 172129](https://github.com/bajpaisushil/Restaurant_FullStack-Client/assets/111970311/1793716f-5479-41bf-8e9a-4e3942fd1b0c)
+![Screenshot 2024-06-29 172045](https://github.com/bajpaisushil/Restaurant_FullStack-Client/assets/111970311/95bc42f1-fb05-48e9-99b5-6b44ebe9ba5f)
+![Screenshot 2024-06-29 172034](https://github.com/bajpaisushil/Restaurant_FullStack-Client/assets/111970311/4cafff13-5d64-4b55-8349-9622eb249320)
+![Screenshot 2024-06-29 172003](https://github.com/bajpaisushil/Restaurant_FullStack-Client/assets/111970311/5067a03c-3ad7-402c-b498-54f7933d54d5)
+![Screenshot 2024-06-29 171956](https://github.com/bajpaisushil/Restaurant_FullStack-Client/assets/111970311/b2c76024-b1c7-4110-a34c-9e134d4a7fec)
+![Screenshot 2024-06-29 171932](https://github.com/bajpaisushil/Restaurant_FullStack-Client/assets/111970311/010385a7-d948-4647-9743-e5d68cf329af)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# LIVE At: https://resticious.vercel.app
