@@ -53,7 +53,7 @@ function UsersList() {
       renderCell: (params)=>{
         return(
           <Actions>
-            <Delete onClick={()=> handleDelete(params.row.id)}>Delete</Delete>
+            <View onClick={()=> nav(`/user/${params.row.id}`)}>View</View>
           </Actions>
         )
       }

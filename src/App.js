@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NavBar from "./components/NavBar";
@@ -11,7 +11,6 @@ import Login from "./components/auth/Login";
 import CheckoutSuccess from "./components/CheckoutSuccess";
 import Dashboard from "./components/admin/Dashboard";
 import Products from "./components/admin/Products";
-import Summary from "./components/admin/Summary";
 import CreateProduct from "./components/admin/CreateProduct";
 import ProductsList from "./components/admin/list/ProductsList";
 import Orders from "./components/admin/Orders";
@@ -19,9 +18,8 @@ import Users from "./components/admin/Users";
 import Product from "./components/Details/Product";
 import Order from "./components/Details/Order";
 import OrdersList from "./components/admin/list/OrdersList";
+import UserProfile from "./components/Details/UserProfile";
 
-//const a=[]
-//input.focus();
 
 function App() {
   return (
@@ -37,6 +35,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/product/:id" element={<Product />} />
             <Route path="/order/:id" element={<Order />} />
+            <Route path="/user/:id" element={<UserProfile />} />
             <Route path="/admin" element={<Dashboard />}>
               <Route path="products" element={<Products />}>
                 <Route index element={<ProductsList />} />

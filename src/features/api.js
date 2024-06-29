@@ -1,4 +1,4 @@
-export const url='http://localhost:5000/api';
+export const url=`${process.env.REACT_APP_API_URL}/api`;
 
 export const setHeaders=()=>{
     const headers={

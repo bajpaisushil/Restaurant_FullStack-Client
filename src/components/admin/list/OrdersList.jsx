@@ -3,10 +3,9 @@ import styled from "styled-components";
 import { DataGrid } from "@mui/x-data-grid";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { productsDelete } from "../../../features/productsSlice";
-import EditProduct from "../EditProduct";
 import { ordersEdit, ordersFetch } from "../../../features/ordersSlice";
 import moment from "moment";
+
 
 export default function OrdersList() {
   const dispatch = useDispatch();
