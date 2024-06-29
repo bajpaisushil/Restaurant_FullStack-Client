@@ -41,7 +41,7 @@ const NavBar = () => {
           </div>
           {auth.role == "staff" && (
             <div>
-              <Link to="/admin/products">Admin Staff</Link>
+              <Link to="/admin/products">Staff</Link>
             </div>
           )}
           <div

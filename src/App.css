@@ -29,11 +29,12 @@
   position: sticky;
   top: 0;
   height: 70px;
+  width: 100%;
   background: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 4rem;
+  padding: 1rem 4rem;
 }
 .nav-bar a {
   text-decoration: none;
@@ -328,6 +329,8 @@
 @media (max-width: 665px) {
   /* NavBar */
   .nav-bar {
+    min-width: 100%;
+    width: max-content;
     padding: 0 1rem;
   }
   .nav-bar h2 {
