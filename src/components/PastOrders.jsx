@@ -25,7 +25,7 @@ console.log('useruser=', user);
 
   return (
     <OrdersContainer>
-      <h2>Past Orders</h2>
+      <h2 style={{margin: '1rem 0'}}>Past Orders</h2>
       {orders?.length > 0 ? (
         orders?.map((order) => (
           <OrderCard key={order?._id}>
@@ -66,12 +66,18 @@ const OrdersContainer = styled.div`
 
 const OrderCard = styled.div`
 display: flex;
+// flex-direction: column;
 justify-content: space-between;
   border: 1px solid #ccc;
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 5px;
   background-color: #f9f9f9;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Change to column on smaller screens */
+  }
+
 `;
 
 const OrderDetails = styled.div`
@@ -105,8 +111,7 @@ const ProductCard = styled.div`
   padding: 10px;
   border-radius: 5px;
   background-color: #fff;
-  width: 30rem;
-  // width: calc(33.333% - 20px);
+  width: 25rem;
 `;
 
 const ProductImage = styled.img`
