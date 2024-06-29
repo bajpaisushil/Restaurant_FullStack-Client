@@ -22,7 +22,7 @@ const CheckoutSuccess=()=>{
             <p>
                 Incase of any inquiries, Contact the support at <strong>support@onlineshop.com</strong>
             </p>
-            <Link to="/">Purchase More...</Link>
+            <Link to="/orders-history">Go to Orders History...</Link>
         </Container>
     )
 }

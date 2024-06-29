@@ -70,7 +70,7 @@ function ProductsList() {
             paginationModel: { page: 0, pageSize: 10 },
           },
         }}
-        pageSizeOptions={[1, 10]}
+        pageSizeOptions={[0, 10]}
         checkboxSelection
         disableRowSelectionOnClick
       />

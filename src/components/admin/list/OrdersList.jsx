@@ -6,11 +6,10 @@ import { useNavigate } from "react-router-dom";
 import { ordersEdit, ordersFetch } from "../../../features/ordersSlice";
 import moment from "moment";
 
-
 export default function OrdersList() {
   const dispatch = useDispatch();
   const { list } = useSelector((state) => state.orders);
-  console.log('listv=', list);
+  console.log("listv=", list);
   const nav = useNavigate();
   const rows =
     list &&
@@ -23,9 +22,11 @@ export default function OrdersList() {
         date: moment(lis.createdAt).fromNow(),
       };
     });
+
   useEffect(() => {
     dispatch(ordersFetch());
   }, [dispatch]);
+
   const columns = [
     { field: "id", headerName: "ID", width: 220 },
     { field: "cName", headerName: "Name", width: 120 },
@@ -60,30 +61,36 @@ export default function OrdersList() {
       sortable: false,
       width: 220,
       renderCell: (params) => {
-        return <Actions>
-            <DispatchBtn onClick={()=> handleOrderDispatch(params.row.id)}>Dispatch</DispatchBtn>
-            <DeliveryBtn onClick={()=> handleOrderDeliver(params.row.id)}>Deliver</DeliveryBtn>
-            <View onClick={()=> nav(`/order/${params.row.id}`)}>View</View>
-        </Actions>
+        return (
+          <Actions>
+            <DispatchBtn onClick={() => handleOrderDispatch(params.row.id)}>
+              Dispatch
+            </DispatchBtn>
+            <DeliveryBtn onClick={() => handleOrderDeliver(params.row.id)}>
+              Deliver
+            </DeliveryBtn>
+            <View onClick={() => nav(`/order/${params.row.id}`)}>View</View>
+          </Actions>
+        );
       },
     },
   ];
-  const handleOrderDispatch=(id)=>{
+  const handleOrderDispatch = (id) => {
     dispatch(
       ordersEdit({
         id,
-        status: "dispatched"
+        status: "dispatched",
       })
-    )
-  }
-  const handleOrderDeliver=(id)=>{
+    );
+  };
+  const handleOrderDeliver = (id) => {
     dispatch(
       ordersEdit({
         id,
-        status: "delivered"
+        status: "delivered",
       })
-    )
-  }
+    );
+  };
 
   return (
     <div style={{ height: 600, width: "100%" }}>
@@ -92,10 +99,10 @@ export default function OrdersList() {
         columns={columns}
         initialState={{
           pagination: {
-            paginationModel: { page: 0, pageSize: 5 },
+            paginationModel: { page: 0, pageSize: 10 },
           },
         }}
-        pageSizeOptions={[5, 10]}
+        pageSizeOptions={[0, 10]}
         checkboxSelection
         disableRowSelectionOnClick
       />
@@ -103,19 +110,19 @@ export default function OrdersList() {
   );
 }
 
-const Actions=styled.div`
-width: 100%;
-display: flex;
-justify-content: space-between;
-button{
-  border: none;
-  outline: none;
-  padding: 3px 5px;
-  color: white;
-  border-radius: 3px;
-  cursor: pointer;
-}
-`
+const Actions = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  button {
+    border: none;
+    outline: none;
+    padding: 3px 5px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+`;
 const DispatchBtn = styled.button`
   background-color: rgb(38, 198, 249);
 `;

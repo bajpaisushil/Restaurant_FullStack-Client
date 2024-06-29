@@ -19,6 +19,7 @@ import Product from "./components/Details/Product";
 import Order from "./components/Details/Order";
 import OrdersList from "./components/admin/list/OrdersList";
 import UserProfile from "./components/Details/UserProfile";
+import PastOrders from "./components/PastOrders";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             <Route path="/product/:id" element={<Product />} />
             <Route path="/order/:id" element={<Order />} />
             <Route path="/user/:id" element={<UserProfile />} />
+            <Route path="/orders-history" element={<PastOrders />} />
             <Route path="/admin" element={<Dashboard />}>
               <Route path="products" element={<Products />}>
                 <Route index element={<ProductsList />} />

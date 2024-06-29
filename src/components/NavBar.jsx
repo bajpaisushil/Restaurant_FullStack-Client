@@ -6,7 +6,7 @@ import { logoutUser } from "../features/authSlice";
 import { toast } from "react-toastify";
 
 const NavBar = () => {
-  const nav=useNavigate();
+  const nav = useNavigate();
   const { cartTotalQuantity } = useSelector((state) => state.cart);
   const auth = useSelector((state) => state.auth);
   console.log("auth-", auth);
@@ -36,9 +36,14 @@ const NavBar = () => {
               </span>
             </div>
           </Link>
-          <div style={{marginRight: '1rem'}}>
-          <Link to={`/user/${auth?._id}`}>Profile</Link>
+          <div style={{ marginRight: "1rem" }}>
+            <Link to={`/user/${auth?._id}`}>Profile</Link>
           </div>
+          {auth.role === "customer" && (
+            <div style={{ marginRight: "1rem" }}>
+              <Link to={`/orders-history`}>Orders</Link>
+            </div>
+          )}
           {auth.role == "staff" && (
             <div>
               <Link to="/admin/products">Staff</Link>
