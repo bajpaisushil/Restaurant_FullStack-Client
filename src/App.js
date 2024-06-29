@@ -13,7 +13,7 @@ import Dashboard from "./components/admin/Dashboard";
 import Products from "./components/admin/Products";
 import CreateProduct from "./components/admin/CreateProduct";
 import ProductsList from "./components/admin/list/ProductsList";
-import Orders from "./components/admin/Orders";
+import Orders from "./components/admin/Orders"; 
 import Users from "./components/admin/Users";
 import Product from "./components/Details/Product";
 import Order from "./components/Details/Order";
