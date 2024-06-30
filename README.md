@@ -5,6 +5,52 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # Restaurant Management System
 A full-stack application for managing orders, products, and users in a restaurant setting. Customers can place orders, view order history, and track order statuses. Admins have access to manage users, products, and orders.
 
+
+Technologies Used
+
+Frontend:
+React.js for building the user interface.
+Redux for state management.
+styled-components for styling components.
+Axios for handling asynchronous HTTP requests.
+
+Backend:
+Node.js and Express.js for building RESTful APIs.
+MongoDB as the database using Mongoose for object modeling.
+JWT (JSON Web Tokens) for secure authentication and authorization.
+
+# Setup Instructions
+
+Clone the repository:
+
+git clone https://github.com/bajpaisushil/Restaurant_FullStack-Client.git
+
+cd repository
+
+Install dependencies:
+cd frontend
+npm install
+
+cd ../backend
+
+npm install
+Set up environment variables:
+Create a .env file in the backend directory and configure environment variables like MongoDB connection URI, JWT secret, etc.
+
+Run the application:
+Start the backend server:
+cd backend
+npm start
+
+Start the frontend development server:
+
+cd frontend
+npm start
+
+Access the application:
+Open your browser and navigate to http://localhost:3000 to view the application.
+
+
 Features
 For Customers:
 Authentication:
@@ -34,51 +80,6 @@ Order Management:
 View all orders placed by customers.
 Update order statuses (pending, dispatched, delivered).
 View order details including customer information and products ordered.
-
-Technologies Used
-
-Frontend:
-React.js for building the user interface.
-Redux for state management.
-Tailwind CSS for styling components.
-Axios for handling asynchronous HTTP requests.
-
-Backend:
-Node.js and Express.js for building RESTful APIs.
-MongoDB as the database using Mongoose for object modeling.
-JWT (JSON Web Tokens) for secure authentication and authorization.
-Firebase Cloud Messaging (FCM) for push notifications.
-Setup Instructions
-
-Clone the repository:
-
-git clone https://github.com/bajpaisushil/Restaurant_FullStack-Client.git
-
-cd repository
-
-Install dependencies:
-cd frontend
-npm install
-
-cd ../backend
-
-npm install
-Set up environment variables:
-Create a .env file in the backend directory and configure environment variables like MongoDB connection URI, JWT secret, etc.
-
-Run the application:
-Start the backend server:
-
-cd backend
-npm start
-
-Start the frontend development server:
-
-cd frontend
-npm start
-
-Access the application:
-Open your browser and navigate to http://localhost:3000 to view the application.
 
 # Previews
 
