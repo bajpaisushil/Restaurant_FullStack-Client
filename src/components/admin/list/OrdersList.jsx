@@ -92,6 +92,7 @@ export default function OrdersList() {
     );
   };
 
+  if(list?.length===0) return <Loader>Loading...</Loader>
   return (
     <div style={{ height: 600, width: "100%" }}>
       <DataGrid
@@ -123,6 +124,12 @@ const Actions = styled.div`
     cursor: pointer;
   }
 `;
+const Loader=styled.div`
+font-size: 2rem;
+font-weight: bolder;
+margin: auto;
+width: fit-content;
+`
 const DispatchBtn = styled.button`
   background-color: rgb(38, 198, 249);
 `;

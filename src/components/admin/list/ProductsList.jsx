@@ -60,6 +60,7 @@ function ProductsList() {
     dispatch(productsDelete(id));
   }
 
+  if(items?.length===0) return <Loader>Loading...</Loader>
   return (
     <div style={{ height: 600, width: '100%' }}>
       <DataGrid
@@ -97,6 +98,12 @@ button{
   border-radius: 3px;
   cursor: pointer;
 }
+`
+const Loader=styled.div`
+font-size: 2rem;
+font-weight: bolder;
+margin: auto;
+width: fit-content;
 `
 const Delete=styled.button`
 background-color: rgb(255, 77, 73);
